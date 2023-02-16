@@ -1,2 +1,2 @@
-#!/bin/bush
+#!/ibin/bash
 gcc -s $CFILE
