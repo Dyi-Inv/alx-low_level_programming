@@ -3,7 +3,7 @@
 * Auth : LAZAR
 */
 
-#include <stdio.h>
+#include <_putchar.h>
 
 /**
  * main - Prints
