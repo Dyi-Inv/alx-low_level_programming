@@ -1,17 +1,10 @@
-/*
-* File: 0-putchar.c
-* Auth : LAZAR
-*/
-
-#include <main.h>
-
+#include "main.h"
 /**
- * main - Prints
- *
- * Return: Alway 0.
-*/
+ * main - Entry point
+ * Return: Always 0
+ */
 
- int main(void);
+int main(void)
 {
 	_putchar('_');
 	_putchar('p');
