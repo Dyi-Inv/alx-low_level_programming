@@ -1,6 +1,12 @@
+/*
+ * File: 0-putchar.c
+ */
+
 #include "main.h"
+
 /**
  * main - Entry point
+ * Description: prints _putchar to stdout
  * Return: Always 0
  */
 
