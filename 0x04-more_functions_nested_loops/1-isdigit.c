@@ -1,11 +1,12 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
- * _isgigit - check if number are 0 - 9
- * @c: char to be cheched
+ * _isdigit - checks for characters that are digits
+ * @c: character 
  *
  * Return: 0 or 1
  */
+
 
 int _isdigit(int c)
 {
