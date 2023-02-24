@@ -1,83 +1,83 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
+
+
+int _pow(int a, int b);
+
 /**
- * main - prints the biggest prime factor of a number.
- *
- * Return: Always 0.
+ * print_number - print the given number.
+ * @n: number to print.
  */
-int main(void)
+void print_number(int n)
 {
-	long int number;
+	int collection = n;
+	unsigned int new_num;
+	int count = 0;
+	int print = 0;
 
-	number = 612852475143;
-
-	if (isPrime(number) == 1)
+	if (n < 0)
 	{
-		printf("%ld\n", number);
+		new_num = -n;
+		_putchar('-');
 	}
 	else
 	{
-		printf("%ld\n", biggestFactor(number));
+		new_num = n;
 	}
-	return (0);
-}
-/**
- * isPrime - analise if a number is prime or not
- * @n: number to check
- * Return: true if it is prime false if not
- */
-int isPrime(long int n)
-{
-	int i;
 
-	if (n <= 1)
+	while (collection != 0)
 	{
-		return (0);
+		collection /= 10;
+		++count;
 	}
-	else if (n == 2)
-	{
-		return (1);
-	}
-	else
-	{
-		for (i = 2; i < n; i++)
+	count -= 1;
+
+	do {
+		if ((new_num / (_pow(10, count)) > 9) && count > 1)
 		{
-			if (n % i == 0)
-			{
-				return (0);
-			}
+			print = new_num / (_pow(10, count));
+			print = print % 10;
+			_putchar('0' + print);
 		}
-	return (1);
-	}
-}
-/**
- * biggestFactor - returns the biggest prime factor of a number
- * @a: number to check
- * Return: biggest factor
- */
-long int biggestFactor(long int a)
-{
-	long int i, factor;
-
-	factor = a;
-	for (i = 2; i <= factor; i++)
-	{
-		if (isPrime(factor) == 1)
+		else if (count > 1)
 		{
-			break;
+			print = (new_num / _pow(10, count));
+		       _putchar('0' + print);
+		}
+		else if (((new_num / 10) > 9) && count == 1)
+		{
+			print = (new_num / 10) % 10;
+			_putchar('0' + print);
+		}
+		else if (count == 1)
+		{
+			print = new_num / 10;
+			_putchar('0' + print);
 		}
 		else
 		{
-			if ((factor % i == 0) && (isPrime(i) == 1))
-			{
-				factor = factor / i;
-				continue;
-			}
-			else
-			{
-				factor = factor;
-			}
+			print = new_num % 10;
+			_putchar('0' + print);
 		}
-	}
-	return (factor);
+		count--;
+	} while (count > -1);
 }
+
+/**
+ * _pow - power fuction
+ * @a: value to use.
+ * @b: growth count
+ *
+ * Return: value int.
+ */
+int _pow(int a, int b)
+{
+	int i;
+	int p = a;
+
+	for (i = 1 ; i < b ; i++)
+	{
+		a *= p;
+	}
+	return (a);
+}
+
