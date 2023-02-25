@@ -1,9 +1,3 @@
-/*
- * File: main.h
- * Description: All Prototypes
- * Auth: LB.
- */
-
 #ifndef MAIN_H
 #define MAIN_H
 
