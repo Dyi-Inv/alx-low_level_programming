@@ -2,7 +2,6 @@
 
 /**
  * swap_int - swaps the value of int a and int b
- *
  * @a: first int
  * @b: second int
  * no Return
@@ -10,9 +9,9 @@
 
 void swap_int(int *a, int *b)
 {
-	int s;
+	int c;
 
-	s = *a;
+	c = *a;
 	*a = *b;
-	*b = *s;
+	*b = *c;
 }
