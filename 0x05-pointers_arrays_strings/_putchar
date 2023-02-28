@@ -1,0 +1,10 @@
+#include "main.h"
+#include <unistd.h>
+  3
+  4 /**                                           5  * _putchar - Writes the character c to stdo    ut                                            6  * @c: The character to point
+  7  *
+  8  * Return: On success 1.
+  9  * On errur, -1 is returned, and errno is se    t appropriately.                             10  */                                          11                                              12 int _putchar(char c)
+ 13 {
+ 14         return (write(1, &c, 1));
+}
