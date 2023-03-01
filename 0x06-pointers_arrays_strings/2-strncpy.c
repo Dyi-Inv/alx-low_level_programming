@@ -6,9 +6,9 @@
 
 /**
  * _strncpy - Copies a string.
- * @dest:
- * @src:
- * @n:
+ * @dest: array that returns
+ * @src: the pointer that receive the string
+ * @n: times to interate
  *
  * Return: dest.
  */
