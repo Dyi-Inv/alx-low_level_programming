@@ -10,18 +10,28 @@
  *
  */
 
-void print_number(int n)
+void 
 {
-	unsigned int i = n;
+	unsigned int size = n;
+
+	int digits = 0;
+
+	int i;
 
 	if (n < 0)
+		size = -n;
+	if (n == 0)
+		digits = 1;
+
+	while (size >= 1)
 	{
-		_putchar(45);
-		i = -i;
+		size = size / 10;
+		digits++;
 	}
-	if (i / 10)
+
+	for (i = 0; i < digits; i++)
 	{
-		print_number(i / 10);
-	}
-	_putchar(i % 10 + '0');
-}
+
+		int pow = 1;
+
+		int
