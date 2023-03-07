@@ -1,19 +1,20 @@
 #include "main.h"
+
 /**
- * _memcpy - fills memory with another buffer.
- * @dest: source string
- * @src: string for filling
- * @n: lenght of buffer
- * Return: new string.
+ * _memcpy - irontnoux2
+ * @dest: pointer to char params
+ * @src: pointer to char params
+ * @n: size
+ * Return: *dest
  */
+
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0;
+	unsigned int i;
 
-	while (i < n)
+	for (i = 0; i < n; i++)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		dest[i] = src[i];
 	}
 	return (dest);
 }
